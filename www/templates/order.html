@@ -1,0 +1,46 @@
+
+<ion-view view-title="在线预约">
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="left">
+            <button  class="button  button-clear " menu-toggle="left" ng-click="fanhui()">
+                返回
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content class="order" style="">
+        <div style="height: 50px;width: 100%"></div>
+        <div class="list  card" style="margin-top: 20px">
+        <form id="yuyue">
+
+
+    <label class="item item-input">
+        <input type="text" placeholder="姓名" class="order-input" ng-model="yuyue.name">
+    </label>
+    <label class="item item-input">
+        <input type="text" placeholder="联系电话" class="order-input" ng-model="yuyue.phone">
+    </label>
+    <label class="item item-input">
+        <input type="text" placeholder="您要预约的时间" class="order-input" ng-model="yuyue.time">
+    </label>
+
+            <h3>选择的服务项目</h3>
+            <select class="fuwu" id="mu" ng-model="yuyue.select">
+                <option value="汽车保养" >汽车保养</option>
+                <option value="洗车" >洗车</option>
+                <option value="汽车维修" selected="selected">汽车维修</option>
+                <option value="更换零部件" >更换零部件</option>
+            </select>
+
+
+
+
+            <div><button class="button button-positive button-full" ng-click="submit()">预约</button></div>
+        </form>
+        </div>
+    </ion-content>
+
+
+
+</ion-view>

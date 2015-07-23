@@ -1,0 +1,25 @@
+<ion-view title="案例详情">
+    <ion-nav-bar class="bar bar-dark">
+        <ion-nav-buttons side="left">
+            <button  class="button  button-dark " menu-toggle="left" ng-click="back()">
+                返回
+            </button>
+            </ion-nav-buttons>
+
+    </ion-nav-bar>
+    <ion-content>
+        <div  style="width: 98%;margin-left: 1%">
+            <div style="margin-top: 10px">
+                <h2 style="font-family: 'STFangsong';">{{data[0].name}}</h2>
+                <h4 style="font-family: 'STFangsong'">{{data[0].user}}</h4>
+            </div>
+            <img style="width: 94%;margin-left: 2%" src="{{data[0].content[0].file}}"><br>
+            <div style="width: 96%;margin-left: 1%">
+            <p style="text-indent: 2em;font-size: 16px;font-family: 'STFangsong'">{{data[0].title}}</p>
+            </div>
+            <img style="width: 94%;margin-left: 2%" src="{{data[0].content[1].file}}">
+            <p style="text-indent: 2em;font-size: 16px;font-family: 'STFangsong'">{{data[0].content[0].desc}}</p>
+
+        </div>
+    </ion-content>
+</ion-view>

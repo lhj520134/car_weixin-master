@@ -1,0 +1,35 @@
+<ion-view view-title="产品展示">
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="left">
+            <button  class="button  button-clear " menu-toggle="left" ng-click="fanhui()">
+                返回
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+<ion-content scroll="true">
+
+        <ion-list>
+
+            <ion-item ng-repeat="car in data" ng-click="details()">
+
+                <img src="{{car.image}}" class="show-img">
+
+
+                <h2 style="float: right;width: 40%;margin-right: 9%">产品名称:<br><br>{{car.desc}}<br><br>产品简介:
+                    <p><br>{{car.user}}</p>
+                </h2>
+                <!--<h3 style="float: right;width: 40%;margin-right: 15px">产品名称:{{car.user}}</h3>-->
+
+
+            </ion-item>
+        </ion-list>
+
+    <!--<div ng-repeat="car in cars" class="list car">-->
+        <!--<img src="{{car.picture}}" style="width: 100%;height: 100%">-->
+        <!--<div>{{car.name}}</div>-->
+        <!--<div>{{car.number}}</div>-->
+    <!--</div>-->
+</ion-content>
+</ion-view>

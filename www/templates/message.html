@@ -1,0 +1,34 @@
+<ion-view view-title="留言" class="bar-positive">
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="left">
+            <button  class="button  button-clear " menu-toggle="left" ng-click="fanhui()">
+                返回
+            </button>
+
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+            <button  class="button  button-clear " menu-toggle="right" ng-click="fanhui1()">
+                留言区
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+        <div>
+        <form id="post" ng-submit="form.submit()">
+    <label class="item item-input"  style="width: 96%; margin-left: 2%;margin-top: 2%" >
+        <div>
+        <textarea ng-model="form.content" placeholder="说点什么吧！" style="height: 50px;"></textarea>
+        </div>
+    </label>
+            <button type="submit" class="button bar-positive" style="float: right;margin-right: 2%;width: 18%;">send</button>
+
+
+
+        </form>
+        </div>
+
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,24 @@
+<ion-view view-title="案例展示">
+    <ion-nav-bar  class="bar-dark">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="left">
+            <button  class="button  button-clear " menu-toggle="left" ng-click="fanhui()">
+                返回
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content scroll="true">
+        <div class="list card" ng-click="check()" ng-repeat="na in data">
+            <div>
+                <img src="{{na.content[0].file}}" style="float: left;width: 40%;margin-left: 3%;margin-top: 1%">
+                    <h3 style="margin-left: 45%">{{na.name}}</h3>
+
+
+                    <p style="margin-left: 45%">点击查看详细信息</p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+
+</ion-view>

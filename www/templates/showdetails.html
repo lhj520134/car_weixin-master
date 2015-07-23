@@ -1,0 +1,39 @@
+<ion-view view-title="产品详细介绍">
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="left">
+            <button  class="button  button-clear " menu-toggle="left" ng-click="fanhui()">
+                返回
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+            <div class="list-inset" ng-repeat="cc in data">
+                <div class="item">
+                    产品名称：<p>{{cc.desc}}</p>
+                </div>
+                <div class="item item-body">
+                    产品简介：<p>{{cc.user}}</p>
+                </div>
+                <div class="item">
+                    图片展示：<br><br>
+
+                    <img ng-click="showImage(1)" class="showdetail-img" src="{{cc.image.file1}}">
+
+                    <img ng-click="showImage(2)" class="showdetail-img" src="{{cc.image.file2}}">
+                    <img ng-click="showImage(3)" class="showdetail-img" src="{{cc.image.file3}}">
+                    <img ng-click="showImage(4)" class="showdetail-img" src="{{cc.image.file3}}">
+                </div>
+
+            </div>
+
+        <script id="image-modal.html" type="text/ng-template">
+            <div class="modal image-modal transparent" ng-click="closeModal()">
+                <ion-pane class="transparent">
+                    <img ng-src="{{imageSrc}}" class="fullscreen-image">
+                </ion-pane>
+            </div>
+        </script>
+    </ion-content>
+    </ion-view>

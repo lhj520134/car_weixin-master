@@ -1,0 +1,37 @@
+<ion-view view-title="商家介绍" class="intru" >
+   <ion-nav-bar class="bar-dark">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+         <button  class="button  button-clear " menu-toggle="left" ng-click="fanhui()">
+            返回
+         </button>
+      </ion-nav-buttons>
+   </ion-nav-bar>
+<ion-content>
+   <div>
+
+         <div  class="item item-body">
+            <h1 style="text-align: center" id="logo">{{data.name}}</h1>
+            <h4>Introduction ：</h4>
+            <p style="text-indent: 2em">{{data.desc}}</p>
+            <p id="example" style="text-indent: 2em">{{data.type}}</p>
+         </div>
+      </div>
+      <div class="item item-body">
+          <img src="{{data.content[0].file}}" class="divcss5-img">
+         <p>{{data.content[0].desc}}</p>
+      </div>
+   </div>
+
+
+
+</ion-content>
+
+
+
+
+
+
+
+   </ion-view>

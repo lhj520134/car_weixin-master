@@ -1,0 +1,32 @@
+<ion-view view-title="优惠活动" class="bar-positive">
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="left">
+            <button  class="button  button-clear " menu-toggle="left" ng-click="fanhui()">
+                返回
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+<ion-content>
+   <div class="act1 orange" ng-repeat="act in data" ng-click="sel()">
+
+           <div  style="width: 100%">
+               <h1 >{{act.title}}</h1>
+           </div>
+       <div>
+           <h2 style="font-size: 14px;color: #111111;text-indent: 2em">{{act.content}}</h2>
+       </div>
+       <img style="width: 60%" src="{{act.image}}">
+       <div style="margin-top: 10px">
+		   <!-- user 对象，.name 得到名字-->
+		   <!--<p style="font-size: 14px;float: right;color:rgba(11, 11, 11, 0.8);margin-top: 10px">{{act.user}}</p>-->
+		   <p style="font-size: 14px;float: right;color:rgba(11, 11, 11, 0.8);margin-top: 10px">{{act.user.name}}</p>
+       </div>
+</div>
+
+
+
+
+</ion-content>
+</ion-view>
