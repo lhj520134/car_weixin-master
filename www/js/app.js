@@ -85,7 +85,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       .state('showdetails',{
         url:'/showdetails',
         templateUrl: 'templates/showdetails.html',
-        controller:'showdetailsCtrl'
+        controller:'showCtrl'
       })
       .state('casecheck',{
           url:'/casecheck',

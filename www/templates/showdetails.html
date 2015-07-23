@@ -9,24 +9,24 @@
         </ion-nav-buttons>
     </ion-nav-bar>
     <ion-content>
-            <div class="list-inset" ng-repeat="cc in data">
-                <div class="item">
-                    产品名称：<p>{{cc.desc}}</p>
-                </div>
-                <div class="item item-body">
-                    产品简介：<p>{{cc.user}}</p>
-                </div>
-                <div class="item">
-                    图片展示：<br><br>
-
-                    <img ng-click="showImage(1)" class="showdetail-img" src="{{cc.image.file1}}">
-
-                    <img ng-click="showImage(2)" class="showdetail-img" src="{{cc.image.file2}}">
-                    <img ng-click="showImage(3)" class="showdetail-img" src="{{cc.image.file3}}">
-                    <img ng-click="showImage(4)" class="showdetail-img" src="{{cc.image.file3}}">
-                </div>
-
+        <div class="list-inset" >
+            <div class="item">
+                产品名称：<p>{{data[0].desc}}</p>
             </div>
+            <div class="item item-body">
+                产品简介：<p>{{data[0].user}}</p>
+            </div>
+            <div class="item">
+                图片展示：<br><br>
+
+                <img ng-click="showImage(1)" class="showdetail-img" src="{{data[0].image.file1}}">
+
+                <img ng-click="showImage(2)" class="showdetail-img" src="{{data[0].image.file2}}">
+                <img ng-click="showImage(3)" class="showdetail-img" src="{{data[0].image.file3}}">
+                <img ng-click="showImage(4)" class="showdetail-img" src="{{data[0].image.file3}}">
+            </div>
+
+        </div>
 
         <script id="image-modal.html" type="text/ng-template">
             <div class="modal image-modal transparent" ng-click="closeModal()">
