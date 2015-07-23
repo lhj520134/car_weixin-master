@@ -12,9 +12,9 @@
 
     <ion-list>
 
-        <ion-item ng-repeat="car in data" ng-click="details()">
+        <ion-item ng-repeat="car in data" href="#/show/{{car.id}}">
 
-            <img src="{{car.image.file1}}" class="show-img">
+            <img src="{{car.image}}" class="show-img">
 
 
             <h2 style="float: right;width: 40%;margin-right: 9%">产品名称:<br><br>{{car.desc}}<br><br>产品简介:

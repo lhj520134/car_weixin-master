@@ -9,31 +9,33 @@
         </ion-nav-buttons>
     </ion-nav-bar>
     <ion-content>
-        <div class="list-inset" >
-            <div class="item">
-                产品名称：<p>{{data[1].desc}}</p>
-            </div>
-            <div class="item item-body">
-                产品简介：<p>{{data[0].user}}</p>
-            </div>
-            <div class="item">
-                图片展示：<br><br>
+        <p>{{aa}}</p>
 
-                <img ng-click="showImage(1)" class="showdetail-img" src="{{data[0].image.file1}}">
+        <!--<div class="list-inset" >-->
+            <!--<div class="item">-->
+                <!--产品名称：<p>{{data[1].desc}}</p>-->
+            <!--</div>-->
+            <!--<div class="item item-body">-->
+                <!--产品简介：<p>{{data[0].user}}</p>-->
+            <!--</div>-->
+            <!--<div class="item">-->
+                <!--图片展示：<br><br>-->
 
-                <img ng-click="showImage(2)" class="showdetail-img" src="{{data[0].image.file2}}">
-                <img ng-click="showImage(3)" class="showdetail-img" src="{{data[0].image.file3}}">
-                <img ng-click="showImage(4)" class="showdetail-img" src="{{data[0].image.file3}}">
-            </div>
+                <!--<img ng-click="showImage(1)" class="showdetail-img" src="{{data[0].image.file1}}">-->
 
-        </div>
+                <!--<img ng-click="showImage(2)" class="showdetail-img" src="{{data[0].image.file2}}">-->
+                <!--<img ng-click="showImage(3)" class="showdetail-img" src="{{data[0].image.file3}}">-->
+                <!--<img ng-click="showImage(4)" class="showdetail-img" src="{{data[0].image.file3}}">-->
+            <!--</div>-->
 
-        <script id="image-modal.html" type="text/ng-template">
-            <div class="modal image-modal transparent" ng-click="closeModal()">
-                <ion-pane class="transparent">
-                    <img ng-src="{{imageSrc}}" class="fullscreen-image">
-                </ion-pane>
-            </div>
-        </script>
+        <!--</div>-->
+
+        <!--<script id="image-modal.html" type="text/ng-template">-->
+            <!--<div class="modal image-modal transparent" ng-click="closeModal()">-->
+                <!--<ion-pane class="transparent">-->
+                    <!--<img ng-src="{{imageSrc}}" class="fullscreen-image">-->
+                <!--</ion-pane>-->
+            <!--</div>-->
+        <!--</script>-->
     </ion-content>
     </ion-view>

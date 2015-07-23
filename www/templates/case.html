@@ -9,16 +9,15 @@
         </ion-nav-buttons>
     </ion-nav-bar>
     <ion-content scroll="true">
-        <div class="list card" ng-click="check()" ng-repeat="na in data">
+        <ion-list>
+        <ion-item ng-repeat="na in data" href="#/case/{{na.id}}">
             <div>
                 <img src="{{na.content[0].file}}" style="float: left;width: 40%;margin-left: 3%;margin-top: 1%">
                     <h3 style="margin-left: 45%">{{na.name}}</h3>
-
-
                     <p style="margin-left: 45%">点击查看详细信息</p>
                 </div>
-            </div>
-        </div>
+            </ion-item>
+            </ion-list>
     </ion-content>
 
 </ion-view>

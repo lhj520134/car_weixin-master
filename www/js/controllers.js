@@ -1,9 +1,9 @@
-//
-//var URL = 'http://127.0.0.1:3001/';
+
+var URL = 'http://127.0.0.1:3001/';
 angular.module('starter.controllers', ['baiduMap'])
 
     .controller('DashCtrl', function ($scope, $state) {
-
+        //设置一个全局变
         $scope.goto = function () {
             $state.go("intruduct");
         }
@@ -42,55 +42,6 @@ angular.module('starter.controllers', ['baiduMap'])
             }).finally(function (p) {
             });
 
-        //$http.post('http://127.0.0.1:3001/activity', {
-        //    params: {
-        //        user: '55adf8a02333d52eefb33e1a',
-        //        title: "怀旧篇",
-        //        content: '购买经典产品享有8折优惠,满1000还可以参加抽奖，奖品爆炸。不来好像真的是你店损失',
-        //        image: 'img/car2.jpg'
-        //    }
-        //}).success(function () {
-        //    console.log('-----success------');
-        //}).finally(function () {
-        //    console.log('-----finally------');
-        //});
-        //$http({
-        //    method: 'GET', url: 'http://127.0.0.1:3001/activity',
-        //
-        //    params: {
-        //        _id: '55adb95f4301cdbc0d2c90bf'
-        //    }
-        //
-        //})
-        //    .success(function (data) {
-        //        $scope.data = data;
-        //    })
-        //    .error(function () {
-        //
-        //    });
-//$scope.data = [
-//    {
-//        user: "---来自XX汽车维修店",
-//        title: "怀旧篇",
-//        content: '购买经典产品享有8折优惠,满1000还可以参加抽奖，奖品爆炸。不来好像真的是你店损失',
-//        image: 'img/car2.jpg'
-//    },
-//    {
-//        user: "---来自XX汽车维修店",
-//        title: "超值篇",
-//        content: '购买经典产品享有8折优惠,满1000还可以参加抽奖，奖品爆炸。不来好像真的是你店损失',
-//        image: 'img/car3.jpg'
-//    },
-//    {
-//        user: "---来自XX汽车维修店",
-//        title: "未来篇",
-//        content: '购买经典产品享有8折优惠,满1000还可以参加抽奖，奖品爆炸。不来好像真的是你店损失',
-//        image: 'img/car4.jpg'
-//    }
-//
-//]
-
-
         $scope.sel = function () {
 
             // 显示操作表
@@ -111,8 +62,7 @@ angular.module('starter.controllers', ['baiduMap'])
 
     })
 
-    .
-    controller('address_selectCtrl', function ($scope, $state) {
+    .controller('address_selectCtrl', function ($scope, $state) {
         $scope.data = [
             {user: "134", name: "XXX汽车维修店红旗店", lat: 13.34, lng: 3434, image: 'img/car6.jpg'},
             {user: "134", name: "XX汽车维修店香洲店", lat: 13.34, lng: 3434, image: 'img/c.jpg'},
@@ -150,35 +100,38 @@ angular.module('starter.controllers', ['baiduMap'])
             $state.go("casecheck")
         }
 
-        $http.get( URL + 'case', {params:{}}).success(function (data) {
-            $scope.data = data;
-        }).error(function (error) {
-            alert(error);
-        }).finally(function () {
-
-        });
-
-        //var data = [
-        //    {
-        //        user: '55adb921c945b79535f6972e',
-        //        name: '你的车多久体检一次',
-        //        title: '汽车安全对于车辆来说...',
-        //        content: [{desc: '超高性能', type: 'image', file: 'img/car6.jpg'}]
-        //    },
-        //    {
-        //        user: '55adbdbcc945b79535f6972f',
-        //        name: 'flosd车',
-        //        title: '现实',
-        //        content: [{desc: '超高性能', type: 'image', file: 'img/car5.jpg'}]
-        //    },
-        //    {
-        //        user: '55ae3e69d30ac6fc12063684',
-        //        name: 'dsadda车',
-        //        title: '现实',
-        //        content: [{desc: '超高性能', type: 'image', file: 'img/car3.jpg'}]
-        //    }
+        //$http.get( URL + 'case', {params:{}}).success(function (data) {
+        //    $scope.data = data;
+        //}).error(function (error) {
+        //    alert(error);
+        //}).finally(function () {
         //
-        //];
+        //});
+
+        $scope.data = [
+            {
+                id:0,
+                user: '55adb921c945b79535f6972e',
+                name: '你的车多久体检一次',
+                title: '汽车安全对于车辆来说...',
+                content: [{desc: '超高性能', type: 'image', file: 'img/car6.jpg'}]
+            },
+            {
+                id:1,
+                user: '55adbdbcc945b79535f6972f',
+                name: 'flosd车',
+                title: '现实',
+                content: [{desc: '超高性能', type: 'image', file: 'img/car5.jpg'}]
+            },
+            {
+                id:2,
+                user: '55ae3e69d30ac6fc12063684',
+                name: 'dsadda车',
+                title: '现实',
+                content: [{desc: '超高性能', type: 'image', file: 'img/car3.jpg'}]
+            }
+
+        ];
         //
         //$http.post('http://127.0.0.1:3001/case', {
         //    params: data })
@@ -196,13 +149,12 @@ angular.module('starter.controllers', ['baiduMap'])
     })
 
     //案例展示
-    //.controller('casecheckCtrl', function ($scope, $state, $http) {
-    //    $scope.fanhui = function () {
-    //        $state.go("dash");
-    //    }
-    //    $scope.back = function () {
-    //        $state.go("case");
-    //    }
+    .controller('casecheckCtrl', function ($scope, $state, $http,$stateParams) {
+
+        $scope.case = function () {
+            $state.go("case");
+        }
+        $scope.aa = $stateParams.caseId;
         //$scope.data = [
         //    {
         //        user: 'XXX汽车维修店',
@@ -228,7 +180,7 @@ angular.module('starter.controllers', ['baiduMap'])
         //
         //]
 
-    //})
+    })
 
     //商家介绍
     .controller('intruductionCtrl', function ($scope, $state, $http) {
@@ -340,8 +292,8 @@ angular.module('starter.controllers', ['baiduMap'])
         })
     })
 
-    //产品展示
-    .controller('showCtrl', function ($scope, Chats, $state, $http, $ionicModal){
+
+    .controller('showCtrl', function ($scope, Chats, $state, $http) {
 
         $scope.fanhui = function () {
             $state.go("dash");
@@ -349,56 +301,45 @@ angular.module('starter.controllers', ['baiduMap'])
         $scope.details = function () {
             $state.go("showdetails")
         }
+        $scope.data = [
+            {
+                id:0,
+                user: '55adf8a02333d52eefb33e1a',
+                desc: 'Cool cool light',
+                image: 'img/car6.jpg'
+            },
+            {
+                id:1,
+                user: '55adf8a02333d52eefb33e1a',
+                desc: 'Cool cool light',
+                image: 'img/car5.jpg'
+            },
+            {
+                id:2,
+                user: '55adf8a02333d52eefb33e1a',
+                desc: 'Cool cool light',
+                image: 'img/car4.jpg'
+            },
+            {
+                id:3,
+                user: '55adf8a02333d52eefb33e1a',
+                desc: 'Cool cool light',
+                image: 'img/car3.jpg'
+            }
+        ];
+
+
+    })
+
+    .controller('showdetailsCtrl', function ($scope, $state, $http, $ionicModal,$stateParams) {
+
+        $scope.aa = $stateParams.showId;
+
+
+
         $scope.fanhui = function () {
             $state.go("show");
         }
-
-        $scope.data = [
-            {
-                user: '55adf8a02333d52eefb33e1a',
-                desc: 'Cool cool light',
-                image:
-                {
-                    file1:'img/car6.jpg',
-                    file2:'img/car5.jpg',
-                    file3:'img/car4.jpg',
-                    file4:'img/car4.jpg'
-                }
-            },
-            {
-                user: '55adf8a02333d52eefb33e1a',
-                desc: 'Cool cool light',
-                image:
-                {
-                    file4:'img/car6.jpg',
-                    file2:'img/car5.jpg',
-                    file3:'img/car4.jpg',
-                    file1:'img/car4.jpg'
-                }
-            },
-            {
-                user: '55adf8a02333d52eefb33e1a',
-                desc: 'Cool cool light',
-                image:
-                {
-                    file2:'img/car6.jpg',
-                    file1:'img/car5.jpg',
-                    file3:'img/car4.jpg',
-                    file4:'img/car4.jpg'
-                }
-            },
-            {
-                user: '55adf8a02333d52eefb33e1a',
-                desc: 'Cool cool light',
-                image:
-                {
-                    file3:'img/car6.jpg',
-                    file2:'img/car5.jpg',
-                    file1:'img/car4.jpg',
-                    file4:'img/car4.jpg'
-                }
-            }
-        ]
         $ionicModal.fromTemplateUrl('image-modal.html', {
             scope: $scope,
             animation: 'slide-in-up'
@@ -428,6 +369,21 @@ angular.module('starter.controllers', ['baiduMap'])
             console.log('Modal is shown!');
         });
 
+        //$scope.data = [
+        //    {
+        //        user: 'We manufacture, in a very awkward time。' +
+        //        'If tomorrow will disappear, I lost more treasures.' +
+        //        ' I am glad I am I, be you love me',
+        //        desc: 'Cool cool light',
+        //        image: {
+        //            file1: 'img/car6.jpg',
+        //            file2: 'img/car5.jpg',
+        //            file3: 'img/car4.jpg',
+        //            file4: 'img/car4.jpg'
+        //        }
+        //
+        //    }
+        //]
         $scope.showImage = function (index) {
             switch (index) {
                 case 1:
@@ -445,60 +401,10 @@ angular.module('starter.controllers', ['baiduMap'])
             }
             $scope.openModal();
         }
-        //$http.post( URL + 'product', {params: {
-        //                user: '55adf8a02333d52eefb33e1a',
-        //                desc: 'Cool cool light',
-        //                image: 'img/car3.jpg'
-        //            }})
-        //    .success(function(data){
-        //        alert('success');
-        //    }).error(function (error) {
-        //        alert(error);
-        //    }).finally(function (callback, progerss) {
-        //
-        //    });
 
-    })
 
-    //.controller('showdetailsCtrl', function ($scope, $state, $http, $ionicModal) {
-    //
-    //
-    //    $scope.data = [
-    //        {
-    //            user: 'We manufacture, in a very awkward time。' +
-    //            'If tomorrow will disappear, I lost more treasures.' +
-    //            ' I am glad I am I, be you love me',
-    //            desc: 'Cool cool light',
-    //            image: {
-    //                file1: 'img/car6.jpg',
-    //                file2: 'img/car5.jpg',
-    //                file3: 'img/car4.jpg',
-    //                file4: 'img/car4.jpg'
-    //            }
-    //
-    //        }
-    //    ]
-    //    $scope.showImage = function (index) {
-    //        switch (index) {
-    //            case 1:
-    //                $scope.imageSrc = $scope.data[0].image.file1;
-    //                break;
-    //            case 2:
-    //                $scope.imageSrc = $scope.data[0].image.file2;
-    //                break;
-    //            case 3:
-    //                $scope.imageSrc = $scope.data[0].image.file3;
-    //                break;
-    //            case 4:
-    //                $scope.imageSrc = $scope.data[0].image.file4;
-    //                break;
-    //        }
-    //        $scope.openModal();
-    //    }
-    //
-    //
-//    //}
-//)
+    }
+)
 
 
 
